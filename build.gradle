@@ -1,0 +1,32 @@
+plugins {
+	id 'java' apply true
+	id 'idea' apply true
+	id 'wrapper' apply true
+	id 'com.gradle.build-scan' version '2.0.2' apply true
+	id 'org.springframework.boot' version '2.1.3.RELEASE' apply true
+	id ("io.spring.dependency-management") version "1.0.6.RELEASE" apply true
+}
+
+
+group = 'com.terracottainnovation'
+version = "$applicationVersion"
+sourceCompatibility = "$sourceCompatibilityVersion"
+
+repositories {
+	mavenCentral()
+	maven { url 'https://repo.spring.io/snapshot' }
+	maven { url 'https://repo.spring.io/milestone' }
+}
+
+dependencies {
+	implementation "org.springframework.boot:spring-boot-dependencies:$springbootVersion"
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+
+
+bootJar {
+    mainClassName = 'com.terracottainnovation.dockerspring.App'
+}
