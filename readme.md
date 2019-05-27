@@ -19,3 +19,6 @@ You can initialize this repository with code from a Subversion, Mercurial, or TF
 
 --Build and run the gradle project
 https://guides.gradle.org/building-spring-boot-2-projects-with-gradle/
+
+-- Gradle - Docker help
+https://doc.cuba-platform.com/manual-6.8/_gradle_plugin_for_docker.html
