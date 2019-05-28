@@ -3,7 +3,7 @@ FROM openjdk:8-jdk-alpine
 #FROM ubuntu
 LABEL maintainer="tejas5mahajan@gmail.com"
 EXPOSE 8080
-COPY *.jar  App.jar
+COPY  *.jar  App.jar
 ENTRYPOINT ["java", "-jar", "App.jar"]
 
 #  docker build . -t docker_spring:latest
