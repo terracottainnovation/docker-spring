@@ -49,13 +49,14 @@ task buildDocker(type: Docker, dependsOn: build) {
 
 	push = false
 	applicationName = bootJar.baseName
+	tag = 'tejas5mahajan/spring-practice'
 	dockerfile = file('Dockerfile')
-	doFirst {
+	/*doFirst {
 		copy {
 			from jar
 			into stageDir
 		}
-	}
+	}*/
 }
 
 bootJar {
